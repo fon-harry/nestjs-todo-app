@@ -1,3 +1,4 @@
+import { ValidationPipe } from '@nestjs/common'
 import { NestFactory } from '@nestjs/core'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
 import { AppModule } from './app.module'
@@ -6,6 +7,8 @@ const packageJson = require('../package.json')
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule)
+
+  app.useGlobalPipes(new ValidationPipe())
 
   const options = new DocumentBuilder()
     .setTitle('TODO')
