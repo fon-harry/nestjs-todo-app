@@ -17,6 +17,6 @@ export class TodoListsService {
   }
 
   findOne(id: number) {
-    return this.todoListRepository.findOne(id)
+    return this.todoListRepository.findOne(id, { relations: ['todos'] })
   }
 }

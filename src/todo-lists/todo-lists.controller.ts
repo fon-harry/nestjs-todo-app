@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Put, Param, Delete, ParseIntPipe } from '@nestjs/common'
+import { Controller, Get, Post, Body, Param, ParseIntPipe } from '@nestjs/common'
 import { TodoListsService } from './todo-lists.service'
 import { CreateTodoListDto } from './dto/create-todo-list.dto'
 import { ApiTags } from '@nestjs/swagger'
