@@ -11,8 +11,8 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe())
 
   const options = new DocumentBuilder()
-    .setTitle('TODO')
-    .setDescription('Application API')
+    .setTitle('Todo App')
+    .setDescription('Todo App API')
     .setVersion(packageJson.version)
     .build()
   const document = SwaggerModule.createDocument(app, options)
